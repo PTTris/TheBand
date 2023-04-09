@@ -1,0 +1,429 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.main{
+    height: 1000px;
+}
+/* Common */
+.clear{
+    clear: both;
+}
+
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.col{
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.col-third{
+    width: calc(100%/3);
+}
+.col-full{
+    width: 100%;
+}
+.col-half{
+    width: 50%;
+}
+.text-center{
+    text-align: center !important;
+}
+.color-while{
+    color: #fff !important; 
+}
+.mt-8{
+    margin-top: 8px !important;
+}
+.mt-16{
+    margin-top: 16px !important;
+}
+.btn{
+    color: #fff;
+    background-color: #000;
+    text-decoration: none;
+    padding: 12px 20px;
+    display: inline-block;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+}
+.btn:hover{
+    color: #000;
+    background-color: #ccc;
+}
+.pull-right{
+    float: right;
+}
+/* Main */
+#header{
+    height: 46.5px;
+    background-color: #000;
+    position: fixed;
+    top:0;
+    left:0;
+    right: 0;
+    z-index: 1;
+}
+.nav{
+    display: inline-block;
+}
+.nav > li{
+    display: inline-block;
+    position: relative; 
+}
+.nav li{
+    list-style-type: none;
+}
+.nav > li > a{
+    text-transform: uppercase;
+    color: #fff;
+}
+.nav li a{
+    font-size: 15px;
+    text-decoration: none;
+    line-height: 46.5px;
+    display: block;
+    padding: 0 24px;
+}
+.nav > li:hover > a,
+.nav .subnav li:hover{
+    color: #000;
+    background-color: #ccc;
+}
+.nav .subnav{
+    min-width: 160px; 
+    position: absolute;
+    background-color: #fff;
+    top: 100%;
+    left: 0;
+    display: none;
+    box-shadow:  0 4px 10px 0 rgb(0 0 0 / 20%) ,  0 4px 20px 0 rgb(0 0 0 / 19%);
+}
+.nav li:hover .subnav{
+    display: block;
+}
+.nav .subnav a{
+    color: #000;
+    padding: 0 12px;
+}
+#header .menu-butn,
+#header .search-butn{
+    float: right;
+    line-height: 46.5px;
+}
+
+#header .search-butn:hover{
+    cursor: pointer;
+    background-color: #f44336;
+}
+#header .menu-butn:hover{
+    background-color: #ccc;
+}
+#header .menu-butn:hover .menu-icon{
+    color: #000;
+}
+.menu-butn{
+    position: absolute;
+    top:0;
+    right: 0;
+    display: none;
+}
+#header .menu-butn,  
+#header .search-icon{
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+    padding: 0 23px;
+}
+.slider{
+    margin-top: 46.5px;
+    padding-top: 50%;
+    background: url(https://www.w3schools.com/w3images/chicago.jpg) top center / cover no-repeat;
+    position: relative;
+}
+.text{
+    position: absolute;
+    bottom: 47px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    /*SỬ dụng width=100% or left=right=0*/
+    text-shadow: 0 0 2px #4a4343;
+}
+.text-heading{
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: lighter;
+    
+}
+.text-direction{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.content .content-section{
+    width: 800px;
+    /* max-width mạnh hơn nên ưu tiên thằng max-width */
+    max-width: 100%; 
+    padding: 64px 0 112px;
+    margin: 0 auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.content .section-heading{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+    margin: 10px 0;
+    letter-spacing: 4px; /*Khoảng cách các kí tự*/
+    line-height: 45px;
+
+}
+.content .section-sub-heading{
+    font-style: italic;
+    text-align: center;
+    font-size: 15px;
+    margin: 15px 0;
+    opacity: 0.6; /*Độ trong suốt*/
+
+}
+.content .section-text{
+    text-align: justify;
+    font-size: 15px;
+    margin: 15px 0;
+    line-height: 1.4; /*Cho tiếng anh còn tiếng việt là 1.6px*/
+}
+
+.content .member-name{
+    font-size: 15px;
+    line-height: 22.5px;
+    margin: 15px 0;
+}
+.content .member-img{
+    width: 154px;
+}
+.content .content-contact{
+    background-color: #000;
+}
+
+.content-contact .tickets-list{
+    background-color: #fff;
+    line-height: 1.5;
+    margin: 30px 0;
+}
+.content-contact li{
+    padding: 8px 16px;
+    border: 1px solid #ddd;
+    font-size: 15px;
+    color: #757575;
+    list-style: none;
+}
+.content-contact .tickets-list .Sold-Out{
+    color: #fff;
+    background-color: #f44336 ;
+    padding: 0 8px;
+    margin-left: 16px;
+}
+.content-section .tickets-list .ticket{
+    float: right;
+    width: 24px;
+    height: 22px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    padding: 0 7px;
+    margin-right: 16px;
+}
+
+.place-list{
+    margin-top: 16px;
+}
+.place-img{
+    width: 100%;
+    display: block;
+}
+.place-img:hover{
+    opacity: 0.6;
+}
+.place-content{
+    background-color: #fff;
+    padding: 16px;
+    font-size: 15px;
+}
+.place-heading{
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+.place-time{
+    opacity: 0.6;
+    margin: 15px 0;
+}
+.place-desc{
+    margin: 15px 0;
+}
+
+
+.contact-content{
+    margin-top: 48px;
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 500;
+}
+.contact-content i[class*="ti-"]{
+    width: 30px;
+    display: inline-block;
+    font-weight: bolder !important;
+}
+.contact-form{
+    font-size: 15px;
+}
+.contact-form .form-control{
+    padding: 11px;
+    border: #ccc 1px solid;
+    width: 100%;
+}
+.contact-info a{
+    opacity: 0.7;
+}
+.contact-info a:hover{
+    opacity: 2;
+}
+.map-section img{
+    width: 100%;
+}
+.footer{
+    padding: 64px 16px;
+    text-align: center;
+}
+.footer .socials-list a{
+    font-size: 24px;
+    text-decoration: none;
+}
+.footer i:hover{
+    opacity: 0.4;
+}
+.footer .coppyright, .socials-list >a{
+    margin: 15px 0;
+    font-size: 15px;
+    color: #757575;
+}
+.modal{
+    /* Overlay */
+    position: fixed;
+    top:0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.4);
+    /* Overlay */
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.modal-container{
+    background-color: #fff;
+    width: 900px;
+    min-height: 300px;
+    max-width: calc(100% - 32px);
+    position: relative;
+    bottom: 60px;
+    animation: modalFadeIn ease 0.5s;
+}
+header.modal-header {
+    background-color: #009688;
+    height: 129px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #fff;
+    letter-spacing: 4px;
+}
+.modal-heading-icon{
+    margin-right: 16px;
+}
+.ti-close:hover{
+    background-color: #ccc;
+    color: #000;
+}
+i.ti-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 14px;
+    color: #fff;
+    padding: 8px 16px;
+    cursor: pointer;
+    line-height: 36px;
+    font-weight: bolder;
+}
+.modal-body, .modal-footer{
+    padding: 0 16px;
+}
+.modal-label{
+    display: block;
+    font-size: 15px;
+    margin: 15px 0 5px ;
+}
+.modal-input{
+    border: 1px solid #ccc;
+    width: 100%;
+    font-size: 15px;
+    padding: 10px;
+}
+.modal-pay{
+    width: 100%;
+    padding: 16px;
+    border: none;
+    margin: 16px 0;
+    cursor: pointer;
+    color: #fff;
+    background-color: #009688;
+    font-size: 15px;
+    font-weight: bold;
+}
+.modal-pay:hover{
+    color: #000;
+    background-color: #ccc;
+}
+.modal-help{
+    float: right;
+    font-size: 15px;
+    margin: 15px 0;
+}
+.modal-help a{
+    color: deepskyblue;
+}
+.open{
+    display: flex;
+}
+@keyframes modalFadeIn {
+    from{
+        transform: translateY(-500px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
