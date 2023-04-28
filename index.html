@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/font/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/font/themify-icons/themify-icons.css">
 </head>
 <body>
     <div class="main">
@@ -209,7 +210,7 @@
             const buyBtns = document.querySelectorAll('.js-buy-ticket')
             const modal = document.querySelector('.js-modal') 
             const closeBtn = document.querySelector('.js-modal-close')
-            const modalcontainer = document.querySelector('.js-modal-container')
+            const modalContainer = document.querySelector('.js-modal-container')
             function showBuyTickets(){
                 modal.classList.add('open')
             }
@@ -224,12 +225,12 @@
 
             modal.addEventListener('click',hideBuyTickets)
 
-            modalcontainer.addEventListener('click', function(event){
+            modalContainer.addEventListener('click', function(event){
                 event.stopPropagation()
             })
         </script>
     </div>
-    <!-- MODAL -->
+    <!-- MODAL mobile-->
    <script>
         var header = document.getElementById('header');
         var mobileMenu = document.getElementById('mobile-menu');
